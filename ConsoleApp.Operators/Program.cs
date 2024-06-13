@@ -64,25 +64,21 @@
             //int increaseValue = num1 + 5;
             //num1 = num1 + 5; Long hand
 
+            Console.WriteLine();
             Console.WriteLine("Please enter a random value for assignment operations: ");
             int randomValue = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine();
             Console.WriteLine("---------- Assignment Results ----------");
             Console.WriteLine();
-            //num1 += 5; //Short hand
             num1 += randomValue; //Short hand
             Console.WriteLine($"Number 1 increased by {randomValue}: {num1}");
-            //num1 -= 3;
             num1 -= randomValue;
             Console.WriteLine($"Number 1 decreased by {randomValue}: {num1}");
-            //num1 /= 2;
             num1 /= randomValue;
             Console.WriteLine($"Number 1 divided by {randomValue}: {num1}");
-            //num1 %= 2;
             num1 %= randomValue;
             Console.WriteLine($"Number 1 modulus by {randomValue}: {num1}");
-            //num1 *= 10;
             num1 *= randomValue;
             Console.WriteLine($"Number 1 multiplied by {randomValue}: {num1}");
 
