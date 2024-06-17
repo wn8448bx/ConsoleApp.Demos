@@ -58,6 +58,7 @@
                 Console.WriteLine($"The result is: {answer}");
                 Console.WriteLine("Press Enter to continue");
                 Console.ReadLine();
+                Console.Clear();
 
                 Console.WriteLine("Please select an operation by number associated (-1 to exit program)");
                 Console.WriteLine("1. Addition");
