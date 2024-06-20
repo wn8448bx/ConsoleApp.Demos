@@ -17,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.SampleCalculator
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.Loops", "ConsoleApp.Loops\ConsoleApp.Loops.csproj", "{06D5E8AE-4988-4123-A8D3-34DDB74E1357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.ExceptionHandlingDemo", "ConsoleApp.ExceptionHandlingDemo\ConsoleApp.ExceptionHandlingDemo.csproj", "{E2074885-2F10-4D12-8B79-30AA8DB05C71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.ExceptionHandlingDemo", "ConsoleApp.ExceptionHandlingDemo\ConsoleApp.ExceptionHandlingDemo.csproj", "{E2074885-2F10-4D12-8B79-30AA8DB05C71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.StringManipulation", "ConsoleApp.StringManipulation\ConsoleApp.StringManipulation.csproj", "{C9A3036F-A31C-45EE-86BB-2FAB0F3F5C32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.DateTimeManipulation", "ConsoleApp.DateTimeManipulation\ConsoleApp.DateTimeManipulation.csproj", "{22FA89A4-CE01-486B-B351-4E74D7722E61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{E2074885-2F10-4D12-8B79-30AA8DB05C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2074885-2F10-4D12-8B79-30AA8DB05C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2074885-2F10-4D12-8B79-30AA8DB05C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A3036F-A31C-45EE-86BB-2FAB0F3F5C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A3036F-A31C-45EE-86BB-2FAB0F3F5C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A3036F-A31C-45EE-86BB-2FAB0F3F5C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A3036F-A31C-45EE-86BB-2FAB0F3F5C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22FA89A4-CE01-486B-B351-4E74D7722E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22FA89A4-CE01-486B-B351-4E74D7722E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22FA89A4-CE01-486B-B351-4E74D7722E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22FA89A4-CE01-486B-B351-4E74D7722E61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

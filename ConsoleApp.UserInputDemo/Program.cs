@@ -1,4 +1,7 @@
-﻿namespace ConsoleApp.UserInputDemo
+﻿using Microsoft.VisualBasic;
+using System.Globalization;
+
+namespace ConsoleApp.UserInputDemo
 {
     internal class Program
     {
@@ -8,7 +11,8 @@
             string firstName = string.Empty; //could leave it string name; - but not best practice 
             string? lastName = string.Empty; //? allows this variable to hold a null value, now the warning is gone from corresponding ReadLine
             int age = 0;
-            int retirementAge = 65;
+            DateOnly dob = new DateOnly();
+            const int retirementAge = 65;
             decimal salary = 0;
             char gender = char.MinValue;
             bool working = true; //bools will automatically default to false if not stated otherwise
@@ -20,8 +24,10 @@
             Console.Write("Please enter your last name: ");
             lastName = Console.ReadLine();
 
-            Console.Write("Please enter your age: ");
-            age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Please enter your date of birth (mm/dd/yyy): ");
+            dob = DateOnly.ParseExact(Console.ReadLine(), "mm/dd/yyyy", CultureInfo.InvariantCulture);
+            age = DateTime.Now.Year - dob.Year;
+          
 
             Console.Write("Please enter your salary: ");
             salary = Convert.ToDecimal(Console.ReadLine());
@@ -34,16 +40,16 @@
 
             //Process the data
             int workingYearsRemaining = retirementAge - age;
+            var estimatedRetirementYear = DateTime.Now.AddYears(workingYearsRemaining);
 
             //Output the results to the user
             Console.WriteLine($"Full name: {firstName} {lastName}");
             Console.WriteLine($"Age: {age}");
             Console.WriteLine($"You Gender is: {gender}");
-            Console.WriteLine($"Your Salary is: {salary}");
+            Console.WriteLine($"Your Salary is: {salary.ToString("C")}");
             Console.WriteLine($"You Are Employed: {working}");
             Console.WriteLine($"Number of working years remaining: {workingYearsRemaining}");
-
-        
+            Console.WriteLine($"Estimated Retirement yeas: {estimatedRetirementYear.Year}");
         }
     }
 }
