@@ -16,12 +16,8 @@
                 try
                 {
                     //Show Calculator options / show menu
-                    Console.WriteLine("Please select an operation by number associated (-1 to exit program)");
-                    Console.WriteLine("1. Addition");
-                    Console.WriteLine("2. Subtraction");
-                    Console.WriteLine("3. Multiplication");
-                    Console.WriteLine("4. Division");
-                    Console.WriteLine("5. Fibonacci sequence");
+                    PrintMenu();
+
                     choice = Convert.ToInt32(Console.ReadLine());
 
                     if (choice == -1)
@@ -39,22 +35,19 @@
                     switch (choice)
                     {
                         case 1:
-                            answer = num1 + num2;
+                           answer = Add(num1, num2);
                             break;
                         case 2:
-                            answer = num1 - num2;
+                            answer = Subtract(num1, num2);
                             break;
                         case 3:
-                            answer = num1 * num2;
+                            answer = Product(num1, num2);
                             break;
                         case 4:
-                            answer = num1 / num2;
+                            answer = Qoutient(num1, num2);
                             break;
                         case 5:
-                            for (int i = num1; i <= num2; i++)
-                            {
-                                answer += i;
-                            }
+                            answer = Fibonacci(num1, num2);
                             break;
                         default:
                             throw new Exception("Invalid menu item selected.");
@@ -81,6 +74,42 @@
             }
         
             Console.WriteLine("***** Thank you for using the sample calculator *****");
+        }
+
+        private static int Add(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+        private static int Subtract(int num1, int num2)
+        {
+            return num1 - num2;
+        }
+        private static int Product(int num1, int num2)
+        {
+            return num1 * num2;
+        }
+        private static int Qoutient(int num1, int num2)
+        {
+            return num1 / num2;
+        }
+        private static int Fibonacci(int num1, int num2)
+        {
+            var answer = 0;
+            for (int i = num1; i <= num2; i++)
+            {
+                answer += i;
+            }
+            return answer;
+        }
+        private static void PrintMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Please select an operation by number associated (-1 to exit program)");
+            Console.WriteLine("1. Addition");
+            Console.WriteLine("2. Subtraction");
+            Console.WriteLine("3. Multiplication");
+            Console.WriteLine("4. Division");
+            Console.WriteLine("5. Fibonacci sequence");
         }
     }
 }
